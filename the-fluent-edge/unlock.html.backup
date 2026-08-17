@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unlock — The Fluent Edge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">The Fluent <span class="slash">/</span> Edge</a>
+  </div>
+</header>
+
+<div class="container exercise-header" style="max-width:560px;margin:40px auto;">
+  <h1>Payment received</h1>
+  <p class="lead" id="unlock-message">Unlocking your exercise…</p>
+  <div id="unlock-actions" class="summary-actions" style="margin-top:24px;"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Fluent Edge</span>
+    <span>Thank you for supporting the project</span>
+  </div>
+</footer>
+
+<script src="js/paywall.js"></script>
+<script>
+(function () {
+  const msg = document.getElementById("unlock-message");
+  const actions = document.getElementById("unlock-actions");
+  const params = new URLSearchParams(window.location.search);
+  let exerciseId = params.get("exercise") || (window.FluentEdgePaywall && FluentEdgePaywall.consumePending());
+
+  if (exerciseId && window.FluentEdgePaywall) {
+    FluentEdgePaywall.unlock(exerciseId);
+    const title = exerciseId.split("-").map(function (w) {
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(" ");
+    msg.textContent = "“" + title + "” is unlocked on this device. You can practice the full exercise anytime.";
+    actions.innerHTML =
+      '<a class="btn btn-primary" href="exercises/' + encodeURIComponent(exerciseId) + '.html">Open exercise</a>' +
+      '<a class="btn" href="index.html">Back to home</a>';
+  } else if (window.FluentEdgePaywall) {
+    // No exercise id — still thank them; they can open the exercise from home
+    msg.textContent = "Thanks for your payment. Open the exercise from the home page — it will be unlocked on this device if you started checkout from that exercise.";
+    actions.innerHTML = '<a class="btn btn-primary" href="index.html">Back to home</a>';
+  } else {
+    msg.textContent = "Something went wrong loading the unlock script. Go back to home and try the exercise again.";
+    actions.innerHTML = '<a class="btn" href="index.html">Back to home</a>';
+  }
+})();
+</script>
+</body>
+</html>

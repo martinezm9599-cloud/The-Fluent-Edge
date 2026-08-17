@@ -1,0 +1,98 @@
+/*
+  AT A RESTAURANT — datos del ejercicio
+  Cada frase tiene: es (español), en (inglés) y category.
+  Para agregar más frases, sumá objetos al array con el mismo formato.
+*/
+
+window.AT_A_RESTAURANT_DATA = [
+  // ---------- GETTING SEATED ----------
+  { category: "Getting Seated", es: "Buenas noches, tenemos una reserva para 3 personas.", en: "Good evening, we have a reservation for 3 people." },
+  { category: "Getting Seated", es: "A nombre de...", en: "It's under the name..." },
+  { category: "Getting Seated", es: "Una mesa para 3, por favor.", en: "A table for 3, please." },
+  { category: "Getting Seated", es: "Nos gustaría una mesa cerca de la ventana.", en: "We'd like a table near the window." },
+  { category: "Getting Seated", es: "Esa, si es posible.", en: "That one, if possible." },
+  { category: "Getting Seated", es: "Porque tiene una buena vista.", en: "Because it has a nice view." },
+  { category: "Getting Seated", es: "Por favor, denos esa mesa.", en: "Please give us that table." },
+  { category: "Getting Seated", es: "Nos sentaremos aquí.", en: "We'll sit here." },
+  { category: "Getting Seated", es: "Vamos a necesitar otra silla, porque ahora viene otro amigo.", en: "We're going to need another chair, because another friend is coming." },
+
+  // ---------- ORDERING ----------
+  { category: "Ordering", es: "Mozo, traiga el menú por favor.", en: "Waiter, bring the menu please." },
+  { category: "Ordering", es: "Moza, queremos ordenar.", en: "Waitress, we'd like to order." },
+  { category: "Ordering", es: "¿Cuál es el plato del día?", en: "What's the dish of the day?" },
+  { category: "Ordering", es: "Necesitamos 5 minutos para pensar, no podemos decidir aún.", en: "We need 5 minutes to think, we can't decide yet." },
+  { category: "Ordering", es: "Mozo, estamos listos para ordenar.", en: "Waiter, we're ready to order." },
+  { category: "Ordering", es: "Queremos el plato del día.", en: "We want the dish of the day." },
+  { category: "Ordering", es: "Queremos pedir el menú número 5.", en: "We'd like to order the number 5 combo." },
+  { category: "Ordering", es: "Para los niños, traiga papas fritas y una hamburguesa sin queso.", en: "For the kids, bring fries and a burger without cheese." },
+  { category: "Ordering", es: "A él no le gusta el queso.", en: "He doesn't like cheese." },
+  { category: "Ordering", es: "Tráigales una gaseosa para tomar.", en: "Bring them a soda to drink." },
+  { category: "Ordering", es: "¿Qué gaseosas tenés?", en: "What sodas do you have?" },
+  { category: "Ordering", es: "Un vino para nosotros, por favor.", en: "A wine for us, please." },
+  { category: "Ordering", es: "Mis amigos quieren tomar una cerveza.", en: "My friends want to have a beer." },
+  { category: "Ordering", es: "Queremos probar la ensalada de lechuga.", en: "We want to try the lettuce salad." },
+  { category: "Ordering", es: "Queremos probar la ensalada de tomate.", en: "We want to try the tomato salad." },
+  { category: "Ordering", es: "Ellos quieren ensalada de zanahoria.", en: "They want carrot salad." },
+  { category: "Ordering", es: "Sin sal, por favor.", en: "No salt, please." },
+  { category: "Ordering", es: "La sal no es saludable.", en: "Salt isn't healthy." },
+  { category: "Ordering", es: "Para la entrada queremos la sopa especial, dos por favor.", en: "For the appetizer we want the special soup, two please." },
+  { category: "Ordering", es: "Para el plato principal queremos pollo con papas, dos por favor.", en: "For the main course we want chicken with fries, two please." },
+  { category: "Ordering", es: "Ella quiere pasta porque no come carne, es vegetariana.", en: "She wants pasta because she doesn't eat meat, she's a vegetarian." },
+  { category: "Ordering", es: "Él quiere bife con papas.", en: "He wants steak with fries." },
+  { category: "Ordering", es: "Ella quiere un bife con arroz.", en: "She wants a steak with rice." },
+
+  // ---------- DURING THE MEAL ----------
+  { category: "During the Meal", es: "Todo está muy rico, felicitaciones al chef.", en: "Everything is delicious, compliments to the chef." },
+  { category: "During the Meal", es: "¿Quién es el chef?", en: "Who's the chef?" },
+  { category: "During the Meal", es: "¿Quién cocinó esto?", en: "Who cooked this?" },
+  { category: "During the Meal", es: "Mozo, llévese este plato, porque está vacío.", en: "Waiter, take this plate away, it's empty." },
+  { category: "During the Meal", es: "No necesitamos esto, llévenselo.", en: "We don't need this, take it away." },
+  { category: "During the Meal", es: "Disculpe, este no es mi pedido.", en: "Excuse me, this isn't my order." },
+  { category: "During the Meal", es: "Yo pedí otra cosa.", en: "I ordered something else." },
+  { category: "During the Meal", es: "Por favor cámbielo porque hay un error.", en: "Please change it, there's a mistake." },
+  { category: "During the Meal", es: "Yo no quería esto.", en: "I didn't want this." },
+  { category: "During the Meal", es: "Esto está un poco frío, ¿puede ponerlo en el horno 5 minutos más?", en: "This is a bit cold, can you put it in the oven for 5 more minutes?" },
+  { category: "During the Meal", es: "Mozo, tenemos un problema aquí, necesitamos algo para limpiar.", en: "Waiter, we have a problem here, we need something to clean up." },
+  { category: "During the Meal", es: "Esta botella está rota.", en: "This bottle is broken." },
+  { category: "During the Meal", es: "Esto está mojado.", en: "This is wet." },
+  { category: "During the Meal", es: "Me gustaría más carne.", en: "I'd like more meat." },
+  { category: "During the Meal", es: "Traiga hielo, por favor, también.", en: "Bring ice too, please." },
+  { category: "During the Meal", es: "Necesito ir al baño, ¿dónde está?", en: "I need to use the restroom, where is it?" },
+  { category: "During the Meal", es: "Mozo, nos gustaría comer postre.", en: "Waiter, we'd like to have dessert." },
+  { category: "During the Meal", es: "Él quiere helado para el postre.", en: "He wants ice cream for dessert." },
+  { category: "During the Meal", es: "Ella quiere frutillas con crema.", en: "She wants strawberries with cream." },
+  { category: "During the Meal", es: "Los niños quieren ensalada de fruta.", en: "The kids want fruit salad." },
+  { category: "During the Meal", es: "Yo no quiero postre.", en: "I don't want dessert." },
+  { category: "During the Meal", es: "Solo una taza de té.", en: "Just a cup of tea." },
+  { category: "During the Meal", es: "¿Qué sabores tenés?", en: "What flavors do you have?" },
+  { category: "During the Meal", es: "Para tomar, un café sin azúcar.", en: "To drink, a coffee without sugar." },
+
+  // ---------- PAYING THE BILL ----------
+  { category: "Paying the Bill", es: "Mozo, la cuenta por favor, queremos pagar.", en: "Waiter, the check please, we want to pay." },
+  { category: "Paying the Bill", es: "¿Cuánto es?", en: "How much is it?" },
+  { category: "Paying the Bill", es: "Aquí hay un error con el precio, nosotros no comimos esto.", en: "There's a mistake with the price, we didn't eat this." },
+  { category: "Paying the Bill", es: "¿Puedo pagar con tarjeta de crédito?", en: "Can I pay with a credit card?" },
+  { category: "Paying the Bill", es: "¿Hacen descuento con efectivo?", en: "Do you give a discount for cash?" },
+  { category: "Paying the Bill", es: "Aquí tiene.", en: "Here you go." },
+  { category: "Paying the Bill", es: "No se preocupe por el cambio, quédese con el cambio.", en: "Don't worry about the change, keep the change." },
+  { category: "Paying the Bill", es: "Voy a dejar una buena propina.", en: "I'm going to leave a good tip." },
+  { category: "Paying the Bill", es: "La atención fue muy buena.", en: "The service was very good." },
+  { category: "Paying the Bill", es: "No te olvides de tu campera.", en: "Don't forget your jacket." },
+  { category: "Paying the Bill", es: "No te olvides de nada.", en: "Don't forget anything." },
+  { category: "Paying the Bill", es: "No dejes nada aquí.", en: "Don't leave anything here." },
+
+  // ---------- REVIEWING THE RESTAURANT ----------
+  { category: "Reviewing the Restaurant", es: "Realmente me gustó este restaurante.", en: "I really liked this restaurant." },
+  { category: "Reviewing the Restaurant", es: "Deberíamos volver algún día.", en: "We should come back someday." },
+  { category: "Reviewing the Restaurant", es: "La comida es rica y no es cara.", en: "The food is good and it's not expensive." },
+  { category: "Reviewing the Restaurant", es: "¿Te gustó?", en: "Did you like it?" },
+  { category: "Reviewing the Restaurant", es: "¿Te gustó el restaurante?", en: "Did you like the restaurant?" },
+  { category: "Reviewing the Restaurant", es: "No me gustó.", en: "I didn't like it." },
+  { category: "Reviewing the Restaurant", es: "La comida no es buena y es un poco cara.", en: "The food isn't good and it's a bit expensive." },
+  { category: "Reviewing the Restaurant", es: "No volvería aquí.", en: "I wouldn't come back here." },
+  { category: "Reviewing the Restaurant", es: "Hay demasiada gente.", en: "There are too many people." },
+  { category: "Reviewing the Restaurant", es: "La música estaba muy alta.", en: "The music was too loud." },
+  { category: "Reviewing the Restaurant", es: "Me gustaría conocer otro lugar la próxima.", en: "I'd like to try a different place next time." },
+  { category: "Reviewing the Restaurant", es: "Este lugar está muy lejos del centro, es difícil llegar aquí caminando.", en: "This place is very far from downtown, it's hard to get here on foot." },
+  { category: "Reviewing the Restaurant", es: "La comida no estaba rica.", en: "The food wasn't good." }
+];

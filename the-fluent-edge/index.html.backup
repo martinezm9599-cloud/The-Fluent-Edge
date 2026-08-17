@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fluent Edge — English Conversation Practice</title>
+<meta name="description" content="Practice material for speaking English fluently, built for advanced students who want to train on their own.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">The Fluent <span class="slash">/</span> Edge</a>
+    <div class="header-right">
+      <nav class="site-nav">
+        <a href="#exercises">Exercises</a>
+      </nav>
+      <div id="profile-widget"></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Conversation practice &middot; advanced English</p>
+    <h1>The gym for your <em>English speaking.</em></h1>
+    <p class="lead">No tutors. No classmates. Just you, speaking, getting better every day. For advanced learners who have no one to practice with. Try it out for free.</p>
+    <div class="hero-warning">
+      <span class="warning-icon">&#9888;</span>
+      Warning: not for beginners — only for advanced students
+    </div>
+  </div>
+</section>
+
+<section id="exercises">
+  <div class="container">
+    <div class="section-head">
+      <h2>Exercises</h2>
+      <span class="count" id="exercise-count"></span>
+    </div>
+    <div id="exercise-categories"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head-stack">
+      <h2>How it works</h2>
+      <button class="section-toggle" type="button" id="how-it-works-toggle">Show me <span class="arrow">&darr;</span></button>
+    </div>
+    <ul class="how-list" id="how-it-works-list" style="display:none;">
+      <li><span class="k">01</span><span><strong>Read the Spanish phrase</strong> and say it out loud in English before checking the answer.</span></li>
+      <li><span class="k">02</span><span><strong>Show answer</strong> reveals the English translation so you can self-correct.</span></li>
+      <li><span class="k">03</span><span>Mark <strong>Correct</strong> or <strong>I got it wrong</strong>. If you miss one, it comes back a little later — not right away.</span></li>
+      <li><span class="k">04</span><span>Enter your name once to save progress, and use <strong>Save &amp; continue later</strong> mid-exercise to pick up where you left off.</span></li>
+      <li><span class="k">05</span><span>At the end you get a <strong>summary</strong> of everything that tripped you up, with an option to review only those.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="suggestions">
+  <div class="container">
+    <div class="section-head">
+      <h2>Suggestions</h2>
+    </div>
+    <div class="suggestion-card edge-cut">
+      <p class="suggestion-intro">Have an idea to make this site better? A phrase list you'd like added, something confusing, a feature that's missing — let me know.</p>
+      <form id="suggestion-form" class="suggestion-form" action="https://formspree.io/f/xpqvjzjn" method="POST">
+        <input type="text" id="suggestion-name" name="name" placeholder="Your name (optional)" maxlength="60" autocomplete="off">
+        <textarea id="suggestion-message" name="message" placeholder="Your suggestion..." rows="4" maxlength="2000" required></textarea>
+        <button type="submit" class="btn btn-primary">Send suggestion</button>
+      </form>
+      <p class="suggestion-note" id="suggestion-note"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Fluent Edge</span>
+    <span>Personal practice material &middot; for classroom use</span>
+  </div>
+</footer>
+
+<script src="exercises/data/invitations.js"></script>
+<script src="exercises/data/taxi.js"></script>
+<script src="exercises/data/asking-for-help.js"></script>
+<script src="exercises/data/hotel.js"></script>
+<script src="exercises/data/apologizing.js"></script>
+<script src="exercises/data/confronting-someone.js"></script>
+<script src="exercises/data/thanking-someone.js"></script>
+<script src="exercises/data/arguing-with-someone.js"></script>
+<script src="exercises/data/hosting-a-guest.js"></script>
+<script src="exercises/data/calling-the-police.js"></script>
+<script src="exercises/data/making-a-complaint.js"></script>
+<script src="exercises/data/at-a-restaurant.js"></script>
+<script src="exercises/data/airport.js"></script>
+<script src="exercises/data/cell-phones.js"></script>
+<script src="exercises/data/at-a-cafe.js"></script>
+<script src="exercises/data/camping.js"></script>
+<script src="exercises/data/at-the-bank.js"></script>
+<script src="exercises/data/at-the-tourist-office.js"></script>
+<script src="exercises/data/at-the-doctor.js"></script>
+<script src="exercises/data/at-the-movies.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/paywall.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/exercises-registry.js"></script>
+<script src="js/app.js"></script>
+<script src="js/suggestions.js"></script>
+<script>
+  FluentEdgeProfile.renderWidget(document.getElementById("profile-widget"));
+
+  const howToggle = document.getElementById("how-it-works-toggle");
+  const howList = document.getElementById("how-it-works-list");
+  howToggle.addEventListener("click", () => {
+    const expanded = howList.style.display !== "none";
+    howList.style.display = expanded ? "none" : "block";
+    howToggle.innerHTML = expanded
+      ? 'Show me <span class="arrow">&darr;</span>'
+      : 'Hide <span class="arrow arrow-up">&darr;</span>';
+  });
+</script>
+</body>
+</html>

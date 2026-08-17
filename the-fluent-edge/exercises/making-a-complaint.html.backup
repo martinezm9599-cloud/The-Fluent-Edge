@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Making a Complaint — The Fluent Edge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="../index.html">The Fluent <span class="slash">/</span> Edge</a>
+    <div class="header-right">
+      <nav class="site-nav">
+        <a href="../index.html">Exercises</a>
+      </nav>
+      <div id="profile-widget"></div>
+    </div>
+  </div>
+</header>
+
+<div class="container exercise-header">
+  <a class="back-link" href="../index.html">&larr; Back to home</a>
+  <span class="card-tag">Conversation</span>
+  <h1>Making a Complaint</h1>
+  <p class="lead">Reporting a problem with a purchase, demanding a solution, and escalating a complaint in English. Read the Spanish phrase, say it out loud in English, then reveal the answer to check yourself.</p>
+</div>
+
+<div class="container practice-stage" id="practice-root">
+  <div class="progress-label" data-progress-label></div>
+  <div class="progress-track"><div class="progress-fill" data-progress-fill></div></div>
+
+  <div data-stage></div>
+  <div data-summary class="summary" style="display:none;"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Fluent Edge</span>
+    <span>Making a Complaint &middot; Returns, refunds &amp; bad service</span>
+  </div>
+</footer>
+
+<script src="data/making-a-complaint.js"></script>
+<script src="../js/profile.js"></script>
+<script src="../js/paywall.js"></script>
+<script src="js/practice-engine.js"></script>
+<script>
+  FluentEdgeProfile.renderWidget(document.getElementById("profile-widget"));
+  const root = document.getElementById("practice-root");
+  initPracticeSession(root, MAKING_A_COMPLAINT_DATA, { exerciseId: "making-a-complaint" });
+</script>
+</body>
+</html>

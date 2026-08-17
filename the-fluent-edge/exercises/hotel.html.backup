@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel — The Fluent Edge</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="../index.html">The Fluent <span class="slash">/</span> Edge</a>
+    <div class="header-right">
+      <nav class="site-nav">
+        <a href="../index.html">Exercises</a>
+      </nav>
+      <div id="profile-widget"></div>
+    </div>
+  </div>
+</header>
+
+<div class="container exercise-header">
+  <a class="back-link" href="../index.html">&larr; Back to home</a>
+  <span class="card-tag">Conversation</span>
+  <h1>Hotel</h1>
+  <p class="lead">Booking a room, checking in, handling problems, and leaving a review. Read the Spanish phrase, say it out loud in English, then reveal the answer to check yourself.</p>
+</div>
+
+<div class="container practice-stage" id="practice-root">
+  <div class="progress-label" data-progress-label></div>
+  <div class="progress-track"><div class="progress-fill" data-progress-fill></div></div>
+
+  <div data-stage></div>
+  <div data-summary class="summary" style="display:none;"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Fluent Edge</span>
+    <span>Hotel &middot; Booking, check-in &amp; reviews</span>
+  </div>
+</footer>
+
+<script src="data/hotel.js"></script>
+<script src="../js/profile.js"></script>
+<script src="../js/paywall.js"></script>
+<script src="js/practice-engine.js"></script>
+<script>
+  FluentEdgeProfile.renderWidget(document.getElementById("profile-widget"));
+  const root = document.getElementById("practice-root");
+  initPracticeSession(root, HOTEL_DATA, { exerciseId: "hotel" });
+</script>
+</body>
+</html>

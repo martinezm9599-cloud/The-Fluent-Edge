@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews — The Fluent Edge</title>
+<meta name="description" content="Every phrase you've missed, across every exercise, collected in one place to practice.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">The Fluent <span class="slash">/</span> Edge</a>
+    <div class="header-right">
+      <nav class="site-nav">
+        <a href="index.html">Exercises</a>
+      </nav>
+      <div id="profile-widget"></div>
+    </div>
+  </div>
+</header>
+
+<div class="container exercise-header">
+  <a class="back-link" href="index.html">&larr; Back to home</a>
+  <span class="card-tag">Review</span>
+  <h1>Reviews</h1>
+  <p class="lead">Every phrase you've missed, across every exercise, collected in one place. Practice them here, or clear out the ones you've got down.</p>
+</div>
+
+<div class="container" id="reviews-root">
+
+  <div id="reviews-signed-out" style="display:none;">
+    <p class="review-empty">Sign in from the box in the top right to start building your review list — phrases you miss in any exercise will show up here automatically.</p>
+  </div>
+
+  <div id="reviews-empty" style="display:none;">
+    <p class="review-empty">Nothing here yet. Phrases you get wrong in any exercise will show up here automatically — go <a href="index.html">practice an exercise</a> to get started.</p>
+  </div>
+
+  <div id="reviews-list-view" style="display:none;">
+    <div class="review-toolbar">
+      <span class="review-count" id="review-count"></span>
+      <div class="review-toolbar-actions">
+        <button class="btn btn-primary" type="button" id="btn-practice-reviews">Practice these</button>
+        <button class="btn btn-wrong" type="button" id="btn-clear-reviews">Clear all</button>
+      </div>
+    </div>
+    <ul class="review-list" id="review-list"></ul>
+  </div>
+
+  <div id="reviews-practice-view" style="display:none;">
+    <a class="back-link" href="#" id="btn-back-to-list">&larr; Back to review list</a>
+    <div class="practice-stage" id="practice-root">
+      <div class="progress-label" data-progress-label></div>
+      <div class="progress-track"><div class="progress-fill" data-progress-fill></div></div>
+      <div data-stage></div>
+      <div data-summary class="summary" style="display:none;"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Fluent Edge</span>
+    <span>Reviews &middot; Everything you've missed, in one place</span>
+  </div>
+</footer>
+
+<script src="js/profile.js"></script>
+<script src="exercises/js/practice-engine.js"></script>
+<script src="js/reviews.js"></script>
+<script>
+  FluentEdgeProfile.renderWidget(document.getElementById("profile-widget"));
+</script>
+</body>
+</html>
