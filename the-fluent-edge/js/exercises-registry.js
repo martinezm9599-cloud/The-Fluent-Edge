@@ -252,5 +252,16 @@ const EXERCISES = [
     count: null,
     dataVar: "AT_THE_MOVIES_DATA",
     locked: false
+  },
+  {
+    id: "at-the-park",
+    category: "translation",
+    tag: "Conversation",
+    title: "At the Park",
+    description: "Going for a walk, the playground, finding a spot, crowds, and leaving the park in English. Translate the Spanish prompt before revealing the answer.",
+    href: "exercises/at-the-park.html",
+    count: null,
+    dataVar: "AT_THE_PARK_DATA",
+    locked: false
   }
 ];
