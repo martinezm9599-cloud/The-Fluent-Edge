@@ -86,13 +86,13 @@ function initPracticeSession(root, allItems, opts) {
           Unlock the full exercise for <strong>${price}</strong>.
         </div>
         <p style="margin-top:12px;opacity:0.75;font-size:14px;line-height:1.5;">
-          Payment for students in <strong>Argentina</strong> via Ualá (card / Ualá balance).<br>
+          Pay securely with debit or credit card (Argentina).<br>
           After you pay, you’ll return here and the exercise unlocks on this device.
         </p>
         <p data-pay-error style="display:none;margin-top:10px;color:#f07178;font-size:14px;"></p>
       </div>
       <div class="stage-actions">
-        <button class="btn btn-primary" type="button" data-btn-pay>Pay with Ualá — ${price}</button>
+        <button class="btn btn-primary" type="button" data-btn-pay>Pay — ${price}</button>
         <a class="btn" href="${homeHref}">Back to home</a>
       </div>
     `;
@@ -101,7 +101,7 @@ function initPracticeSession(root, allItems, opts) {
     if (payBtn) {
       payBtn.addEventListener("click", async function () {
         payBtn.disabled = true;
-        payBtn.textContent = "Connecting to Ualá…";
+        payBtn.textContent = "Connecting…";
         if (errEl) {
           errEl.style.display = "none";
           errEl.textContent = "";
@@ -114,7 +114,7 @@ function initPracticeSession(root, allItems, opts) {
           window.location.href = url;
         } catch (err) {
           payBtn.disabled = false;
-          payBtn.textContent = "Pay with Ualá — " + price;
+          payBtn.textContent = "Pay — " + price;
           if (errEl) {
             errEl.style.display = "block";
             errEl.textContent = (err && err.message) ? err.message : "Could not start payment. Try again.";
