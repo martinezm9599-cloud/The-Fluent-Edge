@@ -22,10 +22,10 @@
     if (ex.locked) return "";
     if (!window.FluentEdgePaywall) return "";
     if (FluentEdgePaywall.isAlwaysFree(ex.id)) {
-      return `<span style="color:#5ddea7;">Free</span>`;
+      return `<span style="color:#5ddea7;font-weight:600;">Free</span>`;
     }
     if (FluentEdgePaywall.isUnlocked(ex.id)) {
-      return `<span style="color:#5ddea7;">Unlocked</span>`;
+      return `<span style="color:#5ddea7;font-weight:600;">Unlocked</span>`;
     }
     const price = FluentEdgePaywall.priceLabel();
     const preview = FluentEdgePaywall.freePreviewCount();
@@ -47,8 +47,17 @@
 
     const card = document.createElement(ex.locked || isAdmin ? "div" : "a");
     if (!ex.locked && !isAdmin) card.href = ex.href;
-    card.className = "exercise-card edge-cut" + (ex.locked ? " is-locked" : "");
+    const unlocked = !ex.locked && window.FluentEdgePaywall &&
+      FluentEdgePaywall.isUnlocked(ex.id) && !FluentEdgePaywall.isAlwaysFree(ex.id);
+    card.className = "exercise-card edge-cut" +
+      (ex.locked ? " is-locked" : "") +
+      (unlocked ? " is-unlocked" : "");
     card.dataset.exerciseId = ex.id;
+    if (unlocked) {
+      card.style.borderColor = "#5ddea7";
+      card.style.boxShadow = "0 0 0 1px rgba(93, 222, 167, 0.35), 0 8px 24px rgba(93, 222, 167, 0.12)";
+      card.style.background = "linear-gradient(160deg, rgba(93, 222, 167, 0.08), transparent 55%)";
+    }
 
     const adminHtml = (!ex.locked && isAdmin)
       ? `<div class="card-admin" data-admin-controls style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;">
