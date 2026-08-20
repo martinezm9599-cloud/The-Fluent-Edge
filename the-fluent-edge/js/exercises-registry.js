@@ -263,5 +263,16 @@ const EXERCISES = [
     count: null,
     dataVar: "AT_THE_PARK_DATA",
     locked: false
+  },
+  {
+    id: "at-the-store",
+    category: "translation",
+    tag: "Conversation",
+    title: "At the Store",
+    description: "Shopping, trying things on, prices, returns, and paying at the store in English. Translate the Spanish prompt before revealing the answer.",
+    href: "exercises/at-the-store.html",
+    count: null,
+    dataVar: "AT_THE_STORE_DATA",
+    locked: false
   }
 ];
