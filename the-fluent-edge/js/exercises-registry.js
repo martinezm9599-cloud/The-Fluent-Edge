@@ -274,5 +274,16 @@ const EXERCISES = [
     count: null,
     dataVar: "AT_THE_STORE_DATA",
     locked: false
+  },
+  {
+    id: "at-the-supermarket",
+    category: "translation",
+    tag: "Conversation",
+    title: "At the Supermarket",
+    description: "Shopping carts, aisles, labels, checkout, and deals at the supermarket in English. Translate the Spanish prompt before revealing the answer.",
+    href: "exercises/at-the-supermarket.html",
+    count: null,
+    dataVar: "AT_THE_SUPERMARKET_DATA",
+    locked: false
   }
 ];
