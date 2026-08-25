@@ -285,5 +285,16 @@ const EXERCISES = [
     count: null,
     dataVar: "AT_THE_SUPERMARKET_DATA",
     locked: false
+  },
+  {
+    id: "in-an-emergency",
+    category: "translation",
+    tag: "Conversation",
+    title: "In an Emergency",
+    description: "Calling an ambulance, injuries, car accidents, and helping someone in an emergency in English. Translate the Spanish prompt before revealing the answer.",
+    href: "exercises/in-an-emergency.html",
+    count: null,
+    dataVar: "IN_AN_EMERGENCY_DATA",
+    locked: false
   }
 ];
